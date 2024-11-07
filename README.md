@@ -1,46 +1,51 @@
-# Getting Started with Create React App
+# UAI-PY Meteorologia!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Front-end para o grupo UAI-Py.
+- Projeto Open Source.
+- Projeto responsavel por consumir os dados meteorologicos do backend.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Tabela de Conteúdos
 
-### `yarn start`
+- [Introdução](#introdução)
+- [Recursos](#recursos)
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação](#instalação)
+- [Contribuidores](#contribuidores)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Introdução
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Este projeto foi desenvolvido com o objetivo de exibir para o usuario os dados de um experimento de agua, trazendo os dados de Temperatura, Umidade, Pluviosidade
 
-### `yarn test`
+## Recursos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Nome da Dependência | Versão  |
+| ------------------- | ------- | 
+| chart.js       | 4.4.6   | 
+| react       | 18.3.1   | 
+| typescript       | 4.4.2   |
+| tailwindcss       | ^3.4.14   |
+| tailwind-variants       | ^0.2.1   |
 
-### `yarn build`
+## Pré-requisitos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Ter o `nodejs` instalado localmente
+* Ter o `npm` instalado localmente
+* Ter o git instalado localmente para clonar o repositório
+  
+## Instalação
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Clone o repositório `git clone https://github.com/ruann3res/uaipy-v2-frontend.git`
+* Digite `npm install`
+* Digite `npm start` para executar o projeto localmente.
+* O servidor front-end estará disponível na porta `3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contribuidores
 
-### `yarn eject`
+- [Ruan Neres](https://github.com/ruann3res)
+- [André Luiz Vicente](https://github.com/andrelvicent-zup)
+- [Matheus M. Sousa](https://github.com/Matheus21sousa)
+- [Ana Clara Custodio](https://github.com/stclaire1)
+- [Vinicius Oliveira Magalhães](https://github.com/Viniciusom13)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Se você gostaria de contribuir para este projeto, por favor, [clique aqui](https://docs.google.com/forms/d/e/1FAIpQLSfUGo8TagcyfmRdbWNL_YFgYgXnfqWSfaaCn--aW4Fs6lnhxA/viewform).
