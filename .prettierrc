@@ -1,0 +1,22 @@
+ {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "endOfLine": "auto",
+    "arrowParens": "avoid",
+    "importOrder": [
+      "^services/(.*)$",
+      "^contexts/(.*)$",
+      "^modules/(.*)$",
+      "^hooks/(.*)$",
+      "^utils/(.*)$",
+      "^types/(.*)$",
+      "^layouts/(.*)$",
+      "^pages/(.*)$",
+      "^components/(.*)$",
+      "^assets/(.*)$",
+      "^[./]",
+      "^[./styles]$"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true
+  }
