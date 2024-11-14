@@ -1,14 +1,19 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Main } from './Screens/main';
-import { AboutUs } from 'Components/Presentation/AboutUs';
-import { Footer } from 'Components/Footer';
+import { AboutUs } from './Components/Presentation/AboutUs';
+import { Footer } from './Components/Footer';
 
 function App() {
   return (
-    <div className="bg-slate-200">
-      <AboutUs />
-      <Main />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="bg-slate-200">
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/sobre-nos" element={<AboutUs />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
