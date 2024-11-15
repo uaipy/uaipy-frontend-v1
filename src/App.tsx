@@ -6,7 +6,7 @@ import { Footer } from './Components/Footer';
 function App() {
   return (
     <BrowserRouter>
-      <div className="bg-slate-200">
+      <div className="bg-white">
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/sobre-nos" element={<AboutUs />} />

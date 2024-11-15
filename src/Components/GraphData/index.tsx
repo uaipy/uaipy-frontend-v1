@@ -21,12 +21,11 @@ ChartJS.register(
 );
 
 export type messageType = {
-  messageReadDate: string;
+  localReadingDate: string;
   data: {
     temperatura: number;
     umidade: number;
     chuvaAcumulada: number;
-    chuvaInstantanea: number;
   };
 };
 
@@ -56,7 +55,7 @@ function WheaterGraph(message: messageType[], dataset: datasetType[]) {
 
   const labels: string[] = [];
   message.forEach(element =>
-    labels.push(new Date(element.messageReadDate).toLocaleTimeString()),
+    labels.push(new Date(element.localReadingDate).toLocaleTimeString()),
   );
   return {
     labels,

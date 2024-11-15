@@ -2,22 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { GraphData } from 'Components/GraphData';
 import Card from '../Card';
 
-interface WeatherData {
-  hum: number;
-  pluviosidade: number;
-  temp: number;
-}
-
 interface Message {
   id: number;
   deviceId: number;
   isSyncedRemotely: boolean;
-  messageReadDate: string;
+  localReadingDate: string;
   data: {
     temperatura: number;
     umidade: number;
     chuvaAcumulada: number;
-    chuvaInstantanea: number;
   };
 }
 
@@ -33,31 +26,37 @@ export function WheaterData() {
 
   useEffect(() => {
     const fetchData = async () => {
+      const url =
+        'https://9l7xt4eeb8.execute-api.us-east-1.amazonaws.com/dev/message?integrationCode=115836cb-cfcd-485b-b368-7cec475d202a';
+      const options = {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': 'AhAhvj3CN05LhLT2qNoYL59VPI5Snksp4tvbAEv0',
+        },
+      };
       try {
-        const response = await fetch(
-          'https://run.mocky.io/v3/e52a3617-0b02-4c04-b6eb-82c74b15502e',
-        );
+        const response = await fetch(url, options);
         console.log(response);
         const data: {
           id: number;
           deviceId: number;
-          data: WeatherData;
+          data: { umidade: number; temperatura: number; pluviosidade: number };
           isSyncedRemotely: boolean;
-          messageReadDate: string;
+          localReadingDate: string;
         }[] = await response.json();
-
-        const formattedData: Message[] = data.map(item => ({
+        const formattedData = data.map(item => ({
           id: item.id,
           deviceId: item.deviceId,
           isSyncedRemotely: item.isSyncedRemotely,
-          messageReadDate: item.messageReadDate,
+          localReadingDate: item.localReadingDate,
           data: {
-            temperatura: item.data.temp,
-            umidade: item.data.hum,
+            umidade: item.data.umidade,
+            temperatura: item.data.temperatura,
             chuvaAcumulada: item.data.pluviosidade,
-            chuvaInstantanea: 0,
           },
         }));
+        console.log(formattedData);
         setMessage(formattedData);
       } catch (error) {
         console.error('Erro ao buscar dados:', error);
